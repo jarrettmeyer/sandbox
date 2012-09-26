@@ -1,6 +1,7 @@
 *.ncrunchproject
 *.ncrunchsolution
 *.suo
+*.user
 
 bin/
 obj/
