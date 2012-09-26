@@ -57,5 +57,25 @@ namespace Sandbox
 
             // Any test that relies on DateTime is a fragile test!
         }
+
+        [Test]
+        public void datetime_equality_depends_on_time()
+        {
+            var date1 = new DateTime(2012, 9, 26, 12, 30, 45);
+            var date2 = new DateTime(2012, 9, 26, 12, 30, 46);
+            Assert.AreNotEqual(date1, date2);
+
+            var date3 = new DateTime(2012, 9, 26, 12, 30, 50);
+            var date4 = new DateTime(2012, 9, 26, 12, 30, 50);
+            Assert.AreEqual(date3, date4);
+
+            var date5 = new DateTime(2012, 9, 26, 12, 30, 55, 200);
+            var date6 = new DateTime(2012, 9, 26, 12, 30, 55, 200);
+            Assert.AreEqual(date5, date6);
+
+            var date7 = new DateTime(2012, 9, 26, 12, 30, 56, 200);
+            var date8 = new DateTime(2012, 9, 26, 12, 30, 56, 201);
+            Assert.AreNotEqual(date7, date8);
+        }
     }
 }
