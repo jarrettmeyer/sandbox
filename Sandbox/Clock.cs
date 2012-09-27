@@ -22,22 +22,33 @@ namespace Sandbox
 
         public DateTime Now
         {
-            get { return DateTime.Now; }
+            get { return DateTime.UtcNow; }
         }
     }
 
     public class StubClock : IClock
     {
-        private readonly DateTime now;
+        private readonly DateTime stub;
 
-        public StubClock(DateTime now)
+        private StubClock(DateTime stub)
         {
-            this.now = now;
+            this.stub = stub;
         }
 
         public DateTime Now
         {
-            get { return this.now; }
+            get { return this.stub; }
+        }
+
+        public static IClock FromDate(int year, int month, int day)
+        {
+            var dateTime = new DateTime(year, month, day);
+            return new StubClock(dateTime);
+        }
+
+        public static IClock FromDateTime(DateTime dateTime)
+        {
+            return new StubClock(dateTime);
         }
     }
 
@@ -48,8 +59,15 @@ namespace Sandbox
         public void can_stub_time()
         {
             var stubTime = new DateTime(2012, 9, 26, 0, 0, 0);
-            var clock = new StubClock(stubTime);
+            var clock = StubClock.FromDateTime(stubTime);
             clock.Now.Should().Be(stubTime);
+        }
+
+        [Test]
+        public void can_create_stub_from_date()
+        {
+            var clock = StubClock.FromDate(2012, 7, 4);
+            clock.Now.Should().Be(new DateTime(2012, 7, 4));
         }
     }
 
