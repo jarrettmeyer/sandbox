@@ -50,6 +50,7 @@
     <Compile Include="Clock.cs" />
     <Compile Include="DateTime_Tests.cs" />
     <Compile Include="Email_Tests.cs" />
+    <Compile Include="IntBoundary_Tests.cs" />
     <Compile Include="License.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
