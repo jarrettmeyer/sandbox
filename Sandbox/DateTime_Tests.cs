@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Diagnostics;
 using NUnit.Framework;
 
 namespace Sandbox
@@ -54,6 +55,10 @@ namespace Sandbox
             var local1 = utc1.ToLocalTime();
             var local2 = utc2.ToLocalTime();
             Assert.AreEqual(local1, local2);
+            Debug.WriteLine("local1: " + local1.ToString());
+            // The above should print 1:30 AM.
+            // DST, Fall Back: at 1:59:59 AM, clocks will go backwards to 1:00:00 AM.
+            // That means that this time will happen twice. Is that a problem in your application?
 
             // Any test that relies on DateTime is a fragile test!
         }
