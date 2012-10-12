@@ -34,7 +34,7 @@ namespace Sandbox
             status.Should().Be(HttpStatusCode.OK);            
         }
 
-        [Test]
+        [Test, Ignore("this test does not work when behind a proxy")]
         public void web_response_has_content()
         {
             var request = WebRequest.Create("http://www.google.com");
