@@ -12,27 +12,60 @@ namespace Sandbox
         {
             var date = new DateTime(2012, 9, 26, 9, 25, 0);
             Assert.AreEqual(DateTimeKind.Unspecified, date.Kind);
+
+            // There is another parameter in the constructor to specify "Kind".
+        }
+
+        [Test]
+        public void datetime_now_should_be_local_kind()
+        {
+            var local = DateTime.Now;
+            Assert.AreEqual(DateTimeKind.Local, local.Kind);
+        }
+
+        [Test]
+        public void datetime_utcnow_should_be_universal_kind()
+        {
+            var utc = DateTime.UtcNow;
+            Assert.AreEqual(DateTimeKind.Utc, utc.Kind);
+        }
+
+        [Test]
+        public void converting_local_to_local_does_nothing()
+        {
+            var localDate = DateTime.Now;
+            var newDate = localDate.ToLocalTime();
+            Assert.AreEqual(localDate, newDate);
+        }
+
+        [Test]
+        public void converting_universal_to_universal_does_nothing()
+        {
+            var utcDate = DateTime.UtcNow;
+            var newDate = utcDate.ToUniversalTime();
+            Assert.AreEqual(utcDate, newDate);
         }
 
         [Test]
         public void datetime_kind_can_change_based_on_usage()
         {
-            var date = new DateTime(2012, 9, 26, 10, 3, 0);
+            var originalDate = new DateTime(2012, 7, 1, 12, 0, 0);
 
             // An unspecified time can be change to a local time. .NET
             // will assume that the original value was universal.
-            var local = date.ToLocalTime();
+            var local = originalDate.ToLocalTime();
+            Assert.AreNotEqual(originalDate, local);
             Assert.AreEqual(DateTimeKind.Local, local.Kind);            
-            Assert.AreEqual(date.AddHours(-4), local);
-            Assert.AreEqual(DateTimeKind.Unspecified, date.Kind);
+            Assert.AreEqual(originalDate.AddHours(-4), local);
+            Assert.AreEqual(DateTimeKind.Unspecified, originalDate.Kind);
 
             // An unspecified time can be change to a universal time. .NET
             // will assume that the original value was local.
-            var utc = date.ToUniversalTime();
+            var utc = originalDate.ToUniversalTime();
+            Assert.AreNotEqual(originalDate, utc);
             Assert.AreEqual(DateTimeKind.Utc, utc.Kind);
-
-            Assert.AreEqual(date.AddHours(4), utc);
-            Assert.AreEqual(DateTimeKind.Unspecified, date.Kind);
+            Assert.AreEqual(originalDate.AddHours(4), utc);
+            Assert.AreEqual(DateTimeKind.Unspecified, originalDate.Kind);
 
             // So, according to .NET, 2 AM GMT and 2 AM in the current time
             // zone are the same thing. Pay no attention that they're different
