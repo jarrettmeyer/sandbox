@@ -5,6 +5,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sandbox", "Sandbox\Sandbox.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sandbox.NHib", "Sandbox.NHib\Sandbox.NHib.csproj", "{53D0AF9B-9F2C-43AB-9294-6D61AD00F32E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sandbox.MVC3", "Sandbox.MVC3\Sandbox.MVC3.csproj", "{93D28CC5-12F9-4453-95BF-3A0E3967A80F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sandbox.MVC3.Tests", "Sandbox.MVC3.Tests\Sandbox.MVC3.Tests.csproj", "{9339B7E9-E0AB-4AB9-AB61-22A15C2D3257}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -19,6 +23,14 @@ Global
 		{53D0AF9B-9F2C-43AB-9294-6D61AD00F32E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{53D0AF9B-9F2C-43AB-9294-6D61AD00F32E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{53D0AF9B-9F2C-43AB-9294-6D61AD00F32E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{93D28CC5-12F9-4453-95BF-3A0E3967A80F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{93D28CC5-12F9-4453-95BF-3A0E3967A80F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{93D28CC5-12F9-4453-95BF-3A0E3967A80F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{93D28CC5-12F9-4453-95BF-3A0E3967A80F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9339B7E9-E0AB-4AB9-AB61-22A15C2D3257}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9339B7E9-E0AB-4AB9-AB61-22A15C2D3257}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9339B7E9-E0AB-4AB9-AB61-22A15C2D3257}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9339B7E9-E0AB-4AB9-AB61-22A15C2D3257}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
