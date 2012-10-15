@@ -12,6 +12,12 @@ namespace Sandbox.MVC3.Controllers
             this.clock = clock;
         }
 
+        public ActionResult GoHome()
+        {
+            // This is an example of a redirect.
+            return RedirectToAction("Index");
+        }
+
         public ActionResult Index()
         {
             return View();

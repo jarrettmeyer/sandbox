@@ -6,12 +6,12 @@ using Sandbox.MVC3.ViewModels;
 namespace Sandbox.MVC3.Controllers
 {
     /// <summary>
-    /// When testing a controller, we're only looking for 3 things:
+    /// When testing a controller, we're only looking for 2 things:
     /// 
     /// 1. Is the action result the same as expected? (ViewResult, PartialViewResult,
     ///    RedirectToRouteResult, RedirectResult, etc.)
     /// 
-    /// 2. Is the model type expected?
+    /// 2. Is the correct type of model returned?
     /// </summary>
     [TestFixture]
     public class HomeController_Tests
@@ -27,23 +27,30 @@ namespace Sandbox.MVC3.Controllers
         }
 
         [Test]
+        public void get_gohome_should_redirect_to_home()
+        {
+            // 1. Do we redirect?
+            // 2. Do we go where we think we go?
+            var result = controller.GoHome();
+            result.Should().BeAssignableTo<RedirectToRouteResult>();
+            (result as RedirectToRouteResult).RouteValues["action"].Should().Be("Index");            
+        }
+
+        [Test]
         public void get_index_should_return_view()
         {
+            // 1. Do we return a view?
             var result = controller.Index();
             result.Should().BeAssignableTo<ViewResult>();
         }
 
         [Test]
-        public void get_servertime_should_return_vew()
+        public void get_servertime_should_return_json()
         {
+            // 1. Do we return JSON?
+            // 2. Do we have the expected model type?
             var result = controller.ServerTime();
             result.Should().BeAssignableTo<JsonResult>();
-        }
-
-        [Test]
-        public void get_servertime_data_should_be_datetime()
-        {
-            var result = controller.ServerTime();
             (result as JsonResult).Data.Should().BeAssignableTo<ServerInfoViewModel>();
         }
     }
