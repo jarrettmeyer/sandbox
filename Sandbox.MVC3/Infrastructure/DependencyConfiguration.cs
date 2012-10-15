@@ -1,4 +1,5 @@
 ﻿using Ninject;
+using Ninject.Web.Common;
 using Sandbox.MVC3.Lib.Commands;
 using Sandbox.MVC3.Lib.Queries;
 
@@ -15,8 +16,9 @@ namespace Sandbox.MVC3.Infrastructure
 
         public void Configure()
         {
-            kernel.Bind<ICommandStore>().To<CommandStoreImpl>();
-            kernel.Bind<IQueryStore>().To<QueryStoreImpl>();
+            kernel.Bind<IClock>().ToConstant(SystemClock.Instance).InSingletonScope();
+            kernel.Bind<ICommandStore>().To<CommandStoreImpl>().InRequestScope();
+            kernel.Bind<IQueryStore>().To<QueryStoreImpl>().InRequestScope();
         }
     }
 }

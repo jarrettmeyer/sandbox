@@ -1,16 +1,11 @@
-﻿using System;
-using System.Web.Mvc;
+﻿using System.Web.Mvc;
+using Sandbox.MVC3.ViewModels;
 
 namespace Sandbox.MVC3.Controllers
 {
     public class HomeController : ApplicationController
     {
         private readonly IClock clock;
-
-        public HomeController()
-            : this(SystemClock.Instance)
-        {            
-        }
 
         public HomeController(IClock clock)
         {
@@ -24,8 +19,11 @@ namespace Sandbox.MVC3.Controllers
 
         public ActionResult ServerTime()
         {
-            var currentServerTime = DateTime.Now;
-            return Json(currentServerTime);
+            var model = new ServerInfoViewModel
+            {
+                Time = clock.Now
+            };
+            return Json(model);
         }
     }
 }
