@@ -9,8 +9,6 @@ namespace Sandbox.MVC3
     {
         protected void Application_Start()
         {
-            AreaRegistration.RegisterAllAreas();
-
             new RouteConfiguration(RouteTable.Routes).Configure();
             new GlobalFilterConfiguration(GlobalFilters.Filters).Configure();
         }

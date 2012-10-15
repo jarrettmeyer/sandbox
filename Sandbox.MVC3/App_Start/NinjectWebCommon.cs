@@ -1,3 +1,5 @@
+using Sandbox.MVC3.Infrastructure;
+
 [assembly: WebActivator.PreApplicationStartMethod(typeof(Sandbox.MVC3.App_Start.NinjectWebCommon), "Start")]
 [assembly: WebActivator.ApplicationShutdownMethodAttribute(typeof(Sandbox.MVC3.App_Start.NinjectWebCommon), "Stop")]
 
@@ -53,6 +55,7 @@ namespace Sandbox.MVC3.App_Start
         /// <param name="kernel">The kernel.</param>
         private static void RegisterServices(IKernel kernel)
         {
+            new DependencyConfiguration(kernel).Configure();
         }        
     }
 }

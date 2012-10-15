@@ -14,7 +14,7 @@ namespace Sandbox.MVC3.Infrastructure
 
         public void Configure()
         {
-            routes.MapRoute("Default", "{controller}/{action}/{id}", new { controller = "Home", action = "Index" }, new { id = UrlParameter.Optional });
+            routes.MapRoute("Default", "{controller}/{action}/{id}", new { controller = "Home", action = "Index", id = UrlParameter.Optional });
         }
     }
 }

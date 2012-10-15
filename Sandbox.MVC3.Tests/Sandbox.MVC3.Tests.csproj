@@ -42,6 +42,7 @@
       <HintPath>..\packages\NUnit.2.6.1\lib\nunit.framework.dll</HintPath>
     </Reference>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
     <Reference Include="System.Web" />
     <Reference Include="System.Web.Mvc, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
@@ -55,6 +56,7 @@
     <Compile Include="Controllers\ApplicationController_Tests.cs" />
     <Compile Include="Controllers\HomeController_Tests.cs" />
     <Compile Include="Infrastructure\DependencyConfiguration_Tests.cs" />
+    <Compile Include="Lib\Validators\SqlServerDateAttribute_Tests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

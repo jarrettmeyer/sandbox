@@ -1,0 +1,31 @@
+﻿@model EmployeeInputModel
+
+@{
+    ViewBag.Title = "New";
+}
+
+<h2>New</h2>
+@using (Html.BeginForm())
+{
+    <p>
+        @Html.LabelFor(x => x.FirstName)
+        @Html.EditorFor(x => x.FirstName)
+        @Html.ValidationMessageFor(x => x.FirstName)
+    </p>
+
+        <p>
+        @Html.LabelFor(x => x.LastName)
+        @Html.EditorFor(x => x.LastName)
+        @Html.ValidationMessageFor(x => x.LastName)
+    </p>
+
+    <p>
+        @Html.LabelFor(x => x.DateOfBirth)
+        @Html.EditorFor(x => x.DateOfBirth)
+        @Html.ValidationMessageFor(x => x.DateOfBirth)
+    </p>
+    
+    <p>
+        <button type="submit">Submit</button>
+    </p>
+}
