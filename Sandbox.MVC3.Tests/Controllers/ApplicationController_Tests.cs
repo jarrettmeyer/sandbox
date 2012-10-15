@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+﻿using System.Collections.Generic;
 using FluentAssertions;
 using NUnit.Framework;
 using Sandbox.MVC3.Lib.Commands;
@@ -17,22 +14,25 @@ namespace Sandbox.MVC3.Controllers
         [SetUp]
         public void before_each_test()
         {
+            var commandStore = new CommandStoreImpl(new List<ICommand> { new FakeCommand() });
+            var queryStore = new QueryStoreImpl(new List<IQuery> { new FakeQuery() });
+
             controller = new FakeController();
-            controller.Commands = new List<ICommand> { new FakeCommand() };
-            controller.Queries = new List<IQuery> { new FakeQuery() };
+            controller.CommandStore = commandStore;
+            controller.QueryStore = queryStore;
         }
 
         [Test]
         public void can_get_requested_command()
         {
-            var command = controller.GetCommandFor<FakeCommand>();
+            var command = controller.GetCommand<FakeCommand>();
             command.Should().BeAssignableTo<FakeCommand>();
         }
 
         [Test]
         public void can_get_requested_query()
         {
-            var query = controller.GetQueryFor<FakeQuery>();
+            var query = controller.GetQuery<FakeQuery>();
             query.Should().BeAssignableTo<FakeQuery>();
         }
 

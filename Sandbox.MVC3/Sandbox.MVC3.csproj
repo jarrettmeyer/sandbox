@@ -81,11 +81,17 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Infrastructure\DependencyConfiguration.cs" />
+    <Compile Include="Infrastructure\GlobalFilterConfiguration.cs" />
     <Compile Include="Infrastructure\RouteConfiguration.cs" />
     <Compile Include="Lib\Commands\AbstractCommand.cs" />
+    <Compile Include="Lib\Commands\CommandStoreImpl.cs" />
     <Compile Include="Lib\Commands\ICommand.cs" />
+    <Compile Include="Lib\Commands\ICommandStore.cs" />
     <Compile Include="Lib\Queries\AbstractQuery.cs" />
     <Compile Include="Lib\Queries\IQuery.cs" />
+    <Compile Include="Lib\Queries\IQueryStore.cs" />
+    <Compile Include="Lib\Queries\QueryStoreImpl.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
