@@ -125,6 +125,15 @@
     <Compile Include="..\Sandbox.MVC3\Controllers\HomeController.cs">
       <Link>Controllers\HomeController.cs</Link>
     </Compile>
+    <Compile Include="..\Sandbox.MVC3\Infrastructure\DependencyConfiguration.cs">
+      <Link>Infrastructure\DependencyConfiguration.cs</Link>
+    </Compile>
+    <Compile Include="..\Sandbox.MVC3\Infrastructure\GlobalFilterConfiguration.cs">
+      <Link>Infrastructure\GlobalFilterConfiguration.cs</Link>
+    </Compile>
+    <Compile Include="..\Sandbox.MVC3\Infrastructure\RouteConfiguration.cs">
+      <Link>Infrastructure\RouteConfiguration.cs</Link>
+    </Compile>
     <Compile Include="..\Sandbox.MVC3\Lib\Commands\AbstractCommand.cs">
       <Link>Lib\Commands\AbstractCommand.cs</Link>
     </Compile>
@@ -190,6 +199,24 @@
       <Project>{6B52E8EC-645B-4468-BBE0-59200B5A3A24}</Project>
       <Name>Sandbox</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="..\Sandbox.MVC3\Views\Employees\New.cshtml">
+      <Link>Views\Employees\New.cshtml</Link>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="..\Sandbox.MVC3\Views\Shared\Error.cshtml">
+      <Link>Views\Shared\Error.cshtml</Link>
+    </Content>
+    <Content Include="..\Sandbox.MVC3\Views\Shared\_Layout.cshtml">
+      <Link>Views\Shared\_Layout.cshtml</Link>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="..\Sandbox.MVC3\Views\Home\Index.cshtml">
+      <Link>Views\Home\Index.cshtml</Link>
+    </Content>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
