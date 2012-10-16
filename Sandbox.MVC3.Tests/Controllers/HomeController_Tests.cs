@@ -1,9 +1,9 @@
 using System.Web.Mvc;
 using FluentAssertions;
 using NUnit.Framework;
-using Sandbox.MVC3.ViewModels;
+using Sandbox.MVC.ViewModels;
 
-namespace Sandbox.MVC3.Controllers
+namespace Sandbox.MVC.Controllers
 {
     /// <summary>
     /// When testing a controller, we're only looking for 2 things:

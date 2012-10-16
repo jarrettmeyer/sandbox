@@ -1,7 +1,7 @@
 ﻿using System.Web.Mvc;
 using System.Web.Routing;
 
-namespace Sandbox.MVC3.Infrastructure
+namespace Sandbox.MVC.Infrastructure
 {
     public class RouteConfiguration
     {

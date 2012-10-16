@@ -1,9 +1,9 @@
 ﻿using System.Web.Mvc;
 using Ninject;
-using Sandbox.MVC3.Lib.Commands;
-using Sandbox.MVC3.Lib.Queries;
+using Sandbox.MVC.Lib.Commands;
+using Sandbox.MVC.Lib.Queries;
 
-namespace Sandbox.MVC3.Controllers
+namespace Sandbox.MVC.Controllers
 {
     public abstract class ApplicationController : Controller
     {

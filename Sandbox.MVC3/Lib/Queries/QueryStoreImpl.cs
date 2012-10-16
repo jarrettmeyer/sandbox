@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
 
-namespace Sandbox.MVC3.Lib.Queries
+namespace Sandbox.MVC.Lib.Queries
 {
     public class QueryStoreImpl : IQueryStore
     {

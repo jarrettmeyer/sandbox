@@ -4,7 +4,7 @@ using System.ComponentModel.DataAnnotations;
 using System.Data.SqlTypes;
 using System.Web.Mvc;
 
-namespace Sandbox.MVC3.Lib.Validators
+namespace Sandbox.MVC.Lib.Validators
 {
     public class SqlServerDateAttribute : ValidationAttribute, IClientValidatable
     {

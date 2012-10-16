@@ -1,9 +1,9 @@
 ﻿using System.Web;
 using System.Web.Mvc;
 using System.Web.Routing;
-using Sandbox.MVC3.Infrastructure;
+using Sandbox.MVC.Infrastructure;
 
-namespace Sandbox.MVC3
+namespace Sandbox.MVC
 {
     public class MvcApplication : HttpApplication
     {

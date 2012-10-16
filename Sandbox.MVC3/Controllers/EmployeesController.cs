@@ -1,11 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.Mvc;
-using Sandbox.MVC3.ViewModels;
+﻿using System.Web.Mvc;
+using Sandbox.MVC.ViewModels;
 
-namespace Sandbox.MVC3.Controllers
+namespace Sandbox.MVC.Controllers
 {
     public class EmployeesController : ApplicationController
     {

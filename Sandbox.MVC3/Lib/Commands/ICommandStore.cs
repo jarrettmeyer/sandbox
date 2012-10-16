@@ -1,4 +1,4 @@
-﻿namespace Sandbox.MVC3.Lib.Commands
+﻿namespace Sandbox.MVC.Lib.Commands
 {
     public interface ICommandStore
     {

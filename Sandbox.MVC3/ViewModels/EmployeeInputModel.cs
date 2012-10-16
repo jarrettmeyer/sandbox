@@ -1,8 +1,8 @@
 ﻿using System;
 using System.ComponentModel.DataAnnotations;
-using Sandbox.MVC3.Lib.Validators;
+using Sandbox.MVC.Lib.Validators;
 
-namespace Sandbox.MVC3.ViewModels
+namespace Sandbox.MVC.ViewModels
 {
     public class EmployeeInputModel
     {

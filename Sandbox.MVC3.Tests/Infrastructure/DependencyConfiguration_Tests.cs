@@ -2,10 +2,10 @@
 using NUnit.Framework;
 using Ninject;
 using Ninject.Parameters;
-using Sandbox.MVC3.Lib.Commands;
-using Sandbox.MVC3.Lib.Queries;
+using Sandbox.MVC.Lib.Commands;
+using Sandbox.MVC.Lib.Queries;
 
-namespace Sandbox.MVC3.Infrastructure
+namespace Sandbox.MVC.Infrastructure
 {
     [TestFixture]
     public class DependencyConfiguration_Tests

@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Sandbox.MVC3.ViewModels
+namespace Sandbox.MVC.ViewModels
 {
     public class ServerInfoViewModel
     {

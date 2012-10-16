@@ -5,7 +5,7 @@ using System.Diagnostics;
 using FluentAssertions;
 using NUnit.Framework;
 
-namespace Sandbox.MVC3.Lib.Validators
+namespace Sandbox.MVC.Lib.Validators
 {
     [TestFixture]
     public class SqlServerDateAttribute_Tests

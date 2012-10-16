@@ -8,7 +8,7 @@
     <ProjectGuid>{9339B7E9-E0AB-4AB9-AB61-22A15C2D3257}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Sandbox.MVC3</RootNamespace>
+    <RootNamespace>Sandbox.MVC</RootNamespace>
     <AssemblyName>Sandbox.MVC3.Tests</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>

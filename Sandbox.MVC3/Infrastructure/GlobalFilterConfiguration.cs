@@ -1,6 +1,6 @@
 ﻿using System.Web.Mvc;
 
-namespace Sandbox.MVC3.Infrastructure
+namespace Sandbox.MVC.Infrastructure
 {
     public class GlobalFilterConfiguration
     {
