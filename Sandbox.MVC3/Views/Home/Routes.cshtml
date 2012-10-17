@@ -1,0 +1,50 @@
+﻿@model dynamic
+
+@{
+    ViewBag.Title = "Routes";
+}
+
+<h2>Show Routes</h2>
+
+<table>
+    <thead>
+        <tr>
+            <th>URL</th>
+            <th>Defaults</th>
+            <th>Constraints</th>
+        </tr>
+    </thead>
+    <tbody>
+        @using (RouteTable.Routes.GetReadLock())
+        {
+            foreach (RouteBase routeBase in RouteTable.Routes)
+            {
+                Route route = routeBase as Route;
+                <tr>
+                    <td>@route.Url</td>
+                    <td>@ShowValues(route.Defaults)</td>
+                    <td>@ShowValues(route.Constraints)</td>
+                </tr>  
+            }
+        }        
+    </tbody>
+</table>
+
+@functions {
+
+    private IHtmlString ShowValues(RouteValueDictionary rvd)
+    {
+        if (rvd == null)
+            return MvcHtmlString.Empty;
+
+        var sb = new System.Text.StringBuilder();
+        
+        foreach (var key in rvd.Keys)
+        {
+            sb.AppendFormat("{0}: {1}<br/>", key, rvd[key]);
+        }
+
+        return MvcHtmlString.Create(sb.ToString());
+    }
+
+}

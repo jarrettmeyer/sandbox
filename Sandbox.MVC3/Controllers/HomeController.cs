@@ -1,4 +1,5 @@
 ﻿using System.Web.Mvc;
+using System.Web.Routing;
 using Sandbox.MVC.ViewModels;
 
 namespace Sandbox.MVC.Controllers
@@ -30,6 +31,11 @@ namespace Sandbox.MVC.Controllers
                 Time = clock.Now
             };
             return Json(model);
+        }
+
+        public ActionResult Routes()
+        {            
+            return View();
         }
     }
 }

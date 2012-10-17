@@ -93,11 +93,15 @@
     </Compile>
     <Compile Include="Infrastructure\DependencyConfiguration.cs" />
     <Compile Include="Infrastructure\GlobalFilterConfiguration.cs" />
+    <Compile Include="Infrastructure\LowercaseRoute.cs" />
+    <Compile Include="Infrastructure\ResourceRouteConfigurationBuilder.cs" />
+    <Compile Include="Infrastructure\RouteCollectionExtensions.cs" />
     <Compile Include="Infrastructure\RouteConfiguration.cs" />
     <Compile Include="Lib\Commands\AbstractCommand.cs" />
     <Compile Include="Lib\Commands\CommandStoreImpl.cs" />
     <Compile Include="Lib\Commands\ICommand.cs" />
     <Compile Include="Lib\Commands\ICommandStore.cs" />
+    <Compile Include="Lib\HttpSessionStateBaseExtensions.cs" />
     <Compile Include="Lib\Queries\AbstractQuery.cs" />
     <Compile Include="Lib\Queries\IQuery.cs" />
     <Compile Include="Lib\Queries\IQueryStore.cs" />
@@ -187,6 +191,9 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\Home\Index.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Home\Routes.cshtml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
