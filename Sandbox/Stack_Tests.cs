@@ -8,6 +8,13 @@ namespace Sandbox
     public class Stack_Tests
     {
         [Test]
+        public void can_create_a_generic_stack()
+        {
+            Stack<int> stack = new Stack<int>(5);
+            stack.Should().BeOfType<Stack<int>>();
+        }
+
+        [Test]
         public void can_create_a_stack()
         {
             Stack stack = new Stack(2);
