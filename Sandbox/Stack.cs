@@ -30,11 +30,9 @@ namespace Sandbox
             {
                 stackPointer += 1;
                 storage[stackPointer] = item;
+                return;
             }
-            else
-            {
-                throw new InvalidOperationException("The stack is full!");
-            }
+            throw new InvalidOperationException("The stack is full!");
         }
 
         public object Pop()
@@ -45,10 +43,7 @@ namespace Sandbox
                 stackPointer -= 1;
                 return item;
             }
-            else
-            {
-                throw new InvalidOperationException("The stack is empty!");
-            }
+            throw new InvalidOperationException("The stack is empty!");
         }
     }
 }
