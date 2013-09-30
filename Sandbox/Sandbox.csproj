@@ -40,6 +40,7 @@
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -47,8 +48,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CachingDemo.cs" />
     <Compile Include="Clock.cs" />
     <Compile Include="DateTime_Tests.cs" />
+    <Compile Include="Delegates.cs" />
     <Compile Include="Email_Tests.cs" />
     <Compile Include="IntBoundary_Tests.cs" />
     <Compile Include="License.cs" />
@@ -56,6 +59,7 @@
     <Compile Include="Registry.cs" />
     <Compile Include="Stack.cs" />
     <Compile Include="Stack_Tests.cs" />
+    <Compile Include="Structs.cs" />
     <Compile Include="WebRequest_Tests.cs" />
   </ItemGroup>
   <ItemGroup>

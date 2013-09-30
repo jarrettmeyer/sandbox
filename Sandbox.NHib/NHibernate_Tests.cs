@@ -28,7 +28,8 @@ namespace Sandbox.NHib
             if (session != null)
                 session.Dispose();
 
-            sessionFactory.Statistics.Clear();
+            if (sessionFactory != null)
+                sessionFactory.Statistics.Clear();
         }
 
         [TestFixtureTearDown]
