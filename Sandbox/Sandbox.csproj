@@ -53,6 +53,7 @@
     <Compile Include="DateTime_Tests.cs" />
     <Compile Include="Delegates.cs" />
     <Compile Include="Email_Tests.cs" />
+    <Compile Include="FilterExample.cs" />
     <Compile Include="IntBoundary_Tests.cs" />
     <Compile Include="License.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
