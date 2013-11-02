@@ -50,6 +50,7 @@
   <ItemGroup>
     <Compile Include="CachingDemo.cs" />
     <Compile Include="Clock.cs" />
+    <Compile Include="Closures.cs" />
     <Compile Include="DateTime_Tests.cs" />
     <Compile Include="Delegates.cs" />
     <Compile Include="Email_Tests.cs" />
