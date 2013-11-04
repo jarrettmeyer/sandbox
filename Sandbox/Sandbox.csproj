@@ -31,6 +31,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Dapper">
+      <HintPath>..\packages\Dapper.1.13\lib\net40\Dapper.dll</HintPath>
+    </Reference>
     <Reference Include="FluentAssertions">
       <HintPath>..\packages\FluentAssertions.1.7.1.1\Lib\net40\FluentAssertions.dll</HintPath>
     </Reference>
@@ -51,6 +54,7 @@
     <Compile Include="CachingDemo.cs" />
     <Compile Include="Clock.cs" />
     <Compile Include="Closures.cs" />
+    <Compile Include="DapperExamples.cs" />
     <Compile Include="DateTime_Tests.cs" />
     <Compile Include="Delegates.cs" />
     <Compile Include="Email_Tests.cs" />
