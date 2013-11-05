@@ -61,6 +61,7 @@
     <Compile Include="FilterExample.cs" />
     <Compile Include="IntBoundary_Tests.cs" />
     <Compile Include="License.cs" />
+    <Compile Include="OptionalParameters.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Registry.cs" />
     <Compile Include="Stack.cs" />
